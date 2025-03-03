@@ -108,6 +108,7 @@ function App() {
           required
         />
         <textarea
+          className="textarea"
           placeholder="Content"
           value={content}
           onChange={(e) => setContent(e.target.value)}
@@ -119,8 +120,8 @@ function App() {
           onChange={(e) => setDate(e.target.value)}
           required
         />
-        <button type="submit">{editId ? 'Update' : 'Add'} Note</button>
-        {editId && <button type="button" onClick={resetForm}>Cancel</button>}
+        <button type="submit" className="button">{editId ? 'Update' : 'Add'} Note</button>
+        {editId && <button type="button" className="button" onClick={resetForm}>Cancel</button>}
       </form>
       <ul>
         {notes.map(note => (
@@ -128,8 +129,8 @@ function App() {
             <h2>{note.title}</h2>
             <p>{note.content ? note.content.substring(0, 100) : 'No content'}...</p>
             <p>{note.date}</p>
-            <button onClick={() => handleEdit(note)}>Edit</button>
-            <button onClick={() => handleDelete(note.id)}>Delete</button>
+            <button className="button" onClick={() => handleEdit(note)}>Edit</button>
+            <button className="button" onClick={() => handleDelete(note.id)}>Delete</button>
           </li>
         ))}
       </ul>
