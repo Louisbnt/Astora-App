@@ -7,3 +7,5 @@ go to the backend file and run:
 
 go to the frontend file and run:
 `npm start`
+
+(coming soon `docker-compose up --build`)
